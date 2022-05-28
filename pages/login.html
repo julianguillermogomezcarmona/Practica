@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/styles/index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "login": "url('../assets/img/login.jpg')",
+              "google": "url('../assets/img/simbolo-de-google.png')",
+              "email": "url('../assets/img/arroba.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section class="h-[100vh] grid grid-cols-2">
+      <div class="bg-indigo-500"></div><!--bg-login bg-cover after:content-[''] after:bg-indigo-600 after:w-[50%] after:h-[100%] after:absolute after:block after:opacity-[30%]-->
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="font-bold text-[40px]">Login Account</h1>
+        <p class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          asperiores veniam 
+        </p>
+        <form class="flex flex-col pt-[20px] h-[440px] justify-between "action="">
+            
+            <div class="flex flex-col">
+                <label class="font-semibold" for="email">Correo</label>
+                <input class=" w-[300px] p-[10px] h-[40px] border-solid border-2 border-indigo-400 rounded-[5px]" type="text" id="email" placeholder="Ingrese su correo"><!--bg-email bg-no-repeat bg-[length:22px_22px] bg-center bg-[position:270px_7px]-->
+
+                <label class="font-semibold" for="password">Contraseña</label>
+                <input class=" w-[300px] p-[10px] h-[40px] border-solid border-2 border-indigo-400 rounded-[5px] "type="password" id="password" placeholder="Ingrese su contraseña">
+
+                <div class="flex items-center justify-between w-[300px] pt-[10px] font-semibold">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remenber">
+                        <label class="text-[10px] pl-[5px]"for="remenber">Recordar contraseña</label>
+                    </div>
+                    <a class="text-[12px]" href="">Recovery password</a>
+                </div>
+                
+                <input class="w-[300px] bg-indigo-500 mt-[20px] rounded-[5px] text-white h-[30px]" type="submit" value="Login">
+
+                <input class="text-indigo-700 border-solid border-2 border-slate-300 rounded-[5px] mt-[20px] h-[30px]" type="submit" value="Sing in with google">
+            </div>
+                
+
+            <div class="flex justify-center ">
+                <label for="">Don't have a account yet?</label>
+                <a class="ml-[5px] text-indigo-700" href="">Sign up</a>
+            </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
